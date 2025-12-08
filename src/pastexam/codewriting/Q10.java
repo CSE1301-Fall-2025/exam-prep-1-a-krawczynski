@@ -1,7 +1,5 @@
 package pastexam.codewriting;
 
-import java.util.Scanner;
-
 public class Q10 {
 
 	/*
@@ -23,13 +21,19 @@ public class Q10 {
 	 */
 	
 	public static void main(String[] args) {
-		
-		//Actual values given here for practice, but
-		//your solution should work for arrays of
-		//any size! Add and subtract some rows
-		//and columns to make sure your solution
-		//works properly.
-		int[][] data = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} }; 
-		
+		int[][] data = {{1, 2, 3}, 
+                 		{4, 5, 6}, 
+                 		{7, 8, 9} };
+
+		int sum = 0;
+		int n = data.length;
+
+		for (int i = 0; i < n; i++) {
+    		sum += data[i][i];            // main diagonal
+    		sum += data[i][n - 1 - i];    // other diagonal
+		}
+
+	System.out.println(sum);
+
 	}
 }

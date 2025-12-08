@@ -24,11 +24,20 @@ public class Q06 {
 		Scanner in = new Scanner(System.in);
 		
 		//Creates an array of Strings (don't worry if you don't understand how)
-		String[] characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("");
+		String[] characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*><?/".split("");
 		
 		System.out.println("How many characters?");
 		int length = in.nextInt();
 		in.close();
+
+		String[] password = new String[length]; 
+
+		for (int i = 0; i < length; i++) {
+			password[i] = characters[(int)(Math.random()*characters.length)];
+		}
 		
+		for (int i = 0; i < password.length; i++) {
+            System.out.print(password[i]);
+		}
 	}
 }

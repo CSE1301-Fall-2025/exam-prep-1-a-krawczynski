@@ -17,6 +17,17 @@ public class Q05 {
 		System.out.println("Please enter a value for n: ");
 		int n = in.nextInt();
 		in.close();
+
+		double sum = 0.0;
+
+		for (int i = 1; i <= n; i++) {
+			if (i % 2 == 1) {
+				sum += 1.0/i;
+			} else {
+				sum -= 1.0/i;
+			}
+		}
 		
+		System.out.println("Your sum is " + sum + ".");
 	}
 }

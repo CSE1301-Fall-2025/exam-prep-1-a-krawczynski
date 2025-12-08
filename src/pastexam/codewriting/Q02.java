@@ -16,7 +16,18 @@ public class Q02 {
 	 */
 	
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
+		double area = 1;
+		while (area != 0) {
+			Scanner width = new Scanner(System.in);
+			System.out.println("What should the width be?");
+			double w = width.nextDouble();
+			Scanner height = new Scanner(System.in);
+			System.out.println("What should the height be?");
+			double h = height.nextDouble();
+			area = w*h;
+			System.out.println("Area is " + area + ".");
+		}
 		
+		System.out.println("Program terminated.");
 	}
 }

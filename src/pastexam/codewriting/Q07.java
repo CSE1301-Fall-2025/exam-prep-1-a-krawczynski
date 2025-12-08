@@ -20,6 +20,11 @@ public class Q07 {
 		System.out.print("Please enter a positive integer: ");
 		int n = in.nextInt();
 		in.close();
-		
+
+		for (int i = 1; i < n; i++) {
+			if (n % i == 0) {
+				System.out.print(i + " ");
+			}
+		}	
 	}
 }

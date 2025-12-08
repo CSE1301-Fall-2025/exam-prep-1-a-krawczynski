@@ -10,7 +10,7 @@ public class Q04 {
 	 * a one dimensional array of size N called points. 
 	 * Each value from data should have an equal chance of being 
 	 * selected and a particular value could be randomly selected more
-	 * than once (in probability and statistics it’s considered 
+	 * than once (in probability and statistics itï¿½s considered 
 	 * a uniform random sample with replacement).
 	 */
 	
@@ -29,6 +29,14 @@ public class Q04 {
 		in.close();
 		
 		int[] points = new int[n];
+		for (int i = 0; i < n; i++) {
+			points[i] = data[(int)(Math.random() * data.length)][(int)(Math.random() * data[0].length)];
+		}
+
+	 	for (int i = 0; i < points.length; i++) {
+            System.out.print(points[i] + " ");
+        }
+        System.out.println();	
 		
 	}
 }
