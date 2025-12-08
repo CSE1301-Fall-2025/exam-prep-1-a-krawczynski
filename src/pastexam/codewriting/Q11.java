@@ -31,8 +31,24 @@ public class Q11 {
 	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		System.out.println("Give a starting number: ");
 		int startingNumber = in.nextInt();
-		
+
+		int randomNumber = (int)(Math.random() * 21) + (startingNumber - 10);
+
+		int guess = 0;
+	
+		System.out.println("Guess a number within the range " + (startingNumber - 10) + " and " + (startingNumber + 10) + ".");
+
+		while (guess != randomNumber) {
+		Scanner in2 = new Scanner(System.in);
+		guess = in2.nextInt();
+			if (guess != randomNumber) {
+			System.out.println("Wrong, guess again!"); 
+		}
+		}
+
+		System.out.println("You guessed correctly! You've won.");
 		
 	}
 }

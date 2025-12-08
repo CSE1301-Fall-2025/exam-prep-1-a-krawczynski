@@ -28,7 +28,13 @@ public class Q12 {
 		//any size! Add and subtract some rows
 		//and columns to make sure your solution
 		//works properly.
-		int[][] data = { {1, 2, 3}, {4, 5, 6} }; 
+		int[][] data = { {1, 2, 3}, {4, 5, 6} };
+		
+		for (int i = 0; i < data.length; i++) {
+			for (int j = 0; j < data[0].length; j++) {
+				
+			}
+		}
 		
 	}
 }
