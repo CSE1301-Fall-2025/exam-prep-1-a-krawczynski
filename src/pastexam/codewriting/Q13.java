@@ -35,8 +35,22 @@ public class Q13 {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Which value would you like to practice multiplying?");
 		int m = in.nextInt();
+
+		int answer = 0;
+
+		for (int i = 1; i < 6; i++) {
+			Scanner in2 = new Scanner(System.in);
+			System.out.println("What is " + m + " * " + i + "?");
+			answer = in2.nextInt();
+			
+			while (answer != (m*i)) {
+				System.out.println("Incorrect. Try again. (What is " + m + " * " + i + "?)");
+				answer = in2.nextInt();
+			}
+			System.out.println("Correct.");
+		}
 		
-		//your code here
+		System.out.println("Well done.");
 
 	}
 }

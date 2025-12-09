@@ -1,7 +1,5 @@
 package pastexam.codewriting;
 
-import java.util.Scanner;
-
 public class Q12 {
 
 	/*
@@ -29,12 +27,15 @@ public class Q12 {
 		//and columns to make sure your solution
 		//works properly.
 		int[][] data = { {1, 2, 3}, {4, 5, 6} };
-		
+		int[] colSums = new int[data[0].length];
+
 		for (int i = 0; i < data.length; i++) {
 			for (int j = 0; j < data[0].length; j++) {
-				
+				colSums[j] += data[i][j];
 			}
 		}
-		
+		for (int i = 0; i < colSums.length; i++) {
+			System.out.print(colSums[i] + " ");
+		}
 	}
 }

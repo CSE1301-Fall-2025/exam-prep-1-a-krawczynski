@@ -1,7 +1,4 @@
 package pastexam.codewriting;
-
-import java.util.Scanner;
-
 public class Q14 {
 
 	/*
@@ -27,7 +24,19 @@ public class Q14 {
 		//any size! Add and subtract some data
 		//to make sure your solution
 		//works properly.
-		int[] data = {1, 2, 3}; 
+		int[] data = {1, 2, 3};
+		int[] newArray = new int[(data.length*2)];
 		
+		for (int i = 0; i < data.length; i++) {
+			newArray[i] = data[i];
+		}
+
+		for (int i = 0; i < data.length; i++) {
+        	newArray[data.length + i] = data[data.length - 1 - i];
+		}
+		
+		for (int i = 0; i < newArray.length; i++) {
+			System.out.print(newArray[i] + " ");
+		}
 	}
 }
